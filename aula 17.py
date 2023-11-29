@@ -26,5 +26,5 @@ for cont in range(0,5):
 #valores.append(2)
 #valores.append(3)
 for c,v in enumerate(valores):
-    print(f'na posição {c} encontrei o numero {v}!')
+    print(f'na posição {c} encontrei o numero {}!')
 print('fim da lista')   
