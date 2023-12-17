@@ -12,7 +12,7 @@ while True:
     #inputs para a lista pessoas
     pesoas.append(input('Nome:'))
     cp+=1
-    pesoas.append(int(input('Peso:')))
+    pesoas.append(float(input('Peso:')))
     #verificando maior e menor peso
     if len(bc)==0:
         mai=men=pesoas[1]
@@ -22,6 +22,7 @@ while True:
      
         if pesoas[1]< men:
             men=pesoas[1]
+    
                   
     #colocando a lista pessoas na lista bc
     bc.append(pesoas[:])
@@ -31,7 +32,20 @@ while True:
     if p in 'sS':
         break
 print('='*40)
-#mostre na tela o total de pessoas cadastradas 
+#mostre na tela o total de pessoas cadastradas
+
 print(f'foram cadastrada o toral de {cp} pessoas')
-print(f'o maior peso foi {mai}')
-print(f'o menor peso foi {men}') 
+print(f'o maior peso foi {mai}kg de',end=" ")
+for p in bc:
+    #condição para maior pesso
+    if p[1] == mai:
+        print(f'{[p[0]]}',end=' ') 
+print()  
+print(f'o menor peso foi {men}kg',end=' ')
+for p in bc:
+    #condição para menor pesso
+    if p[1] == men:
+        print(f'[{p[0]}]',end=' ')
+print()
+        
+
